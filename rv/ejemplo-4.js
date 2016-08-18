@@ -9,4 +9,5 @@ var material =new THREE.MeshNormalMaterial();
 var cubo =new THREE.Mesh (forma,material);
 cubo.rotateX(-Math.PI/4);
 cubo.rotateY(Math.PI/4);
+escena.add(cubo);
 renderizador.render(escena,camara)
