@@ -5,7 +5,7 @@ figura.lineTo(40,40);
 figura.lineTo(10,10);
 var forma = new THREE.ShapeGeometry(figura);
 var malla = new THREE.Mesh(forma);
-var escena = new THREES.Scene();
+var escena = new THREE.Scene();
 escena.add(malla);
 var camara =new THREE.PerspectiveCamera();
 camera.position.z=100;
