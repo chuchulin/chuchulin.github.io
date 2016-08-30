@@ -14,7 +14,7 @@ var arbolMalla= new THREE.Mesh(arbolForma,material);
 
 var escena = new THREE.Scene();
 escena.add(arbolMalla);
-var camera = nw THREE.PerspectiveCamera();
+var camera = new THREE.PerspectiveCamera();
 camera.position.z=5;
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize(window.innerHeight*.95,window.innerHeight*.95);
