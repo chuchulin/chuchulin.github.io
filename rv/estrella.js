@@ -1,11 +1,11 @@
 var figura = new THREE.Shape();
 figura.moveTo(-5,8.66);
 figura.lineTo(5,8.66);
-figura.lineTo(8.66,0);
+figura.lineTo(10,0);
 
 figura.lineTo(5,-8.66);
 figura.lineTo(-5,-8.66);
-figura.lineTo(-8.66,0);
+figura.lineTo(-10,0);
 figura.lineTo(-5,8.66);
 var forma = new THREE.ShapeGeometry(figura);
 var malla = new THREE.Mesh(forma);
