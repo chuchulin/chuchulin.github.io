@@ -1,9 +1,11 @@
 var figura = new THREE.Shape();
-figura.moveTo(-20,-20);
-figura.lineTo(20,-20);
-figura.lineTo(0,8.28);
-figura.lineTo(-20,-20);
-var forma = new THREE.ShapeGeometry(figura);
+figura.moveTo(-10,10);
+figura.lineTo(0,14.2);
+figura.lineTo(10,10);
+figura.lineTo(-10,10);
+var forma = new THREE.ShapeGeometry(figura),
+  
+
 var malla = new THREE.Mesh(forma);
 var escena = new THREE.Scene();
 escena.add(malla);
