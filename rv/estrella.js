@@ -4,8 +4,6 @@ figura.lineTo(0,14.2);
 figura.lineTo(10,10);
 figura.lineTo(-10,10);
 var forma = new THREE.ShapeGeometry(figura),
-  
-
 var malla = new THREE.Mesh(forma);
 var escena = new THREE.Scene();
 escena.add(malla);
