@@ -16,7 +16,7 @@ forma.faces.push(new THREES.Face3(2,3,4));
 ///se hace una esfera de menor tamanio que acota al objeto
 forma.computeBoundingSphere();
 forma.computeFaceNormals();
-var material = new THREE.MeshNormal Material();
+var material = new THREE.MeshNormalMaterial();
 var malla= new THREE.Mesh(forma, material);
 malla.rotateX(Math.PI/4);
 var escena = new THREE.Scene();
