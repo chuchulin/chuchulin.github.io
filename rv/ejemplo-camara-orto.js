@@ -3,8 +3,8 @@ camara.left=window.innerWidth/-2;
 camara.right=window.innerWidth/2;
 camara.top=window.innerWidth/2;
 camara.bottom=window.innerWidth/-2;
-camera.near=0.1;
-camera.far=1000;
+camara.near=0.1;
+camara.far=1000;
 camara.updateProjectionMatrix();
 camera.position.z=100;
 
