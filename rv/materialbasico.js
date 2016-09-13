@@ -12,4 +12,4 @@ var lienzo = document.getElementById("basicMaterial")
 var renderizador = new THREE.WebGlRenderer({canvas.lienzo, antialias:true)
 renderizador.setSize(600,600);
 document.body.appendChild(renderizador.domElement);
-renderizador.render();
+renderizador.render(escena,camara);
