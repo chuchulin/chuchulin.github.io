@@ -26,7 +26,7 @@ renderizador.setSize(600,600);
 
 renderizador.shadowMapEnabled=true;
 malla.castShadow=true;
-base.reciveShadoe=true;
+base.reciveShadow=true;
 iluminacion.castShadow=true;
 
 
