@@ -1,5 +1,5 @@
 var material = new THREE.SphrereGeometry(1);
-var forma    = new THREE.MeshBasicMaterial({color:0x00ff00);
+var forma    = new THREE.MeshBasicMaterial({color:'0x00ff00');
 var malla    = new THREE.Mesh(forma,material);
 
 var escena   = new THREE.Scene();
