@@ -5,7 +5,7 @@ luz.position.z=10;
 
 
 var forma = new THREE.SphreGeometry(1);
-var material    = new THREE.MeshLambertMaterial({color:'0x00ff00');
+var material    = new THREE.MeshLambertMaterial({color:'0x00FF00');
 var malla    = new THREE.Mesh(forma,material);
 
 var escena   = new THREE.Scene();
