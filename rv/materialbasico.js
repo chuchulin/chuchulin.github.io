@@ -21,8 +21,14 @@ var camara = new THREE.PerspectiveCamera();
 camara.position.z = 15;
 camara.position.y = 5;
 
-//var lienzo = document.getElementById("LambertMaterial");
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize(600,600);
+
+renderizador.shadowMapEnabled=true;
+malla.castShadow=true;
+base.reciveShadoe=true;
+iluminacion.castShadow=true;
+
+
 document.body.appendChild(renderizador.domElement);
 renderizador.render(escena,camara);
