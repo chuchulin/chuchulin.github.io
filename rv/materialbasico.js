@@ -1,8 +1,8 @@
-var luz = new THREE.PointLight(0xFFFFFF);
+/*var luz = new THREE.PointLight(0xFFFFFF);
 luz.position.x=10;
 luz.position.y=10;
 luz.position.z=10;
-
+*/
 
 var forma = new THREE.SphereGeometry(1);
 var material    = new THREE.MeshBasicMaterial({color:'0x00FF00'});
