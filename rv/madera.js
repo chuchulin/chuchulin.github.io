@@ -1,41 +1,25 @@
-import { Texture } from './Texture';
-import { CubeReflectionMapping } from '../constants';
+// instantiate a loader
+var loader = new THREE.ImageLoader();
 
-/**
- * @author mrdoob / http://mrdoob.com/
- */
+// load a image resource
+loader.load(
+	// resource URL
+	'imagen_047.jpg',
+	// Function when resource is loaded
+	function ( image ) {
+		// do something with it
 
-function CubeTexture( images, mapping, wrapS, wrapT, magFilter, minFilter, format, type, anisotropy, encoding ) {
-
-	images = images !== undefined ? images : [];
-	mapping = mapping !== undefined ? mapping : CubeReflectionMapping;
-
-	Texture.call( this, images, mapping, wrapS, wrapT, magFilter, minFilter, format, type, anisotropy, encoding );
-
-	this.flipY = false;
-
-}
-
-CubeTexture.prototype = Object.create( Texture.prototype );
-CubeTexture.prototype.constructor = CubeTexture;
-
-CubeTexture.prototype.isCubeTexture = true;
-
-Object.defineProperty( CubeTexture.prototype, 'images', {
-
-	get: function () {
-
-		return this.image;
-
+		// like drawing a part of it on a canvas
+		var canvas = document.createElement( 'canvas' );
+		var context = canvas.getContext( '2d' );
+		context.drawImage( image, 100, 100 );
 	},
-
-	set: function ( value ) {
-
-		this.image = value;
-
+	// Function called when download progresses
+	function ( xhr ) {
+		console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+	},
+	// Function called when download errors
+	function ( xhr ) {
+		console.log( 'An error happened' );
 	}
-
-} );
-
-
-export { CubeTexture };
+);
