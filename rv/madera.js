@@ -3,7 +3,7 @@ var loader = new THREE.ImageLoader();
 // load a image resource
 loader.load(
 	// resource URL
-	'textures/skyboxsun25degtest.png',
+	'imagen_047.jpg',
 	// Function when resource is loaded
 	function ( image ) {
 		// do something with it
