@@ -1,10 +1,12 @@
 var luz = new THREE.PointLight(0xFFFFFF);
 luz.position.y=20;
 
+var loader = new THREE.ImageLoader();
+loader.load('textures/skyboxsun25degtest.png')
 
 
 var forma = new THREE.SphereGeometry(1);
-var material    = new THREE.MeshLambertMaterial({color:"#00cc00"});
+var material    = new THREE.MeshLambertMaterial({color:"#00cc00", map:loader});
 var malla    = new THREE.Mesh(forma,material);
 malla.position.y=2;
 
