@@ -2,7 +2,7 @@ var luz = new THREE.PointLight(0xFFFFFF);
 luz.position.y=20;
 
 var loader = new THREE.ImageLoader();
-loader.load('textures/skyboxsun25degtest.png')
+loader.load('imagen_047.jpg')
 
 
 var forma = new THREE.SphereGeometry(1);
