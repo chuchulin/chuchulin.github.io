@@ -5,12 +5,18 @@ var loader = new THREE.TextureLoader();
 
 
 loader.load(
-	'imagen_047.jpg');
-
+	'textures/land_ocean_ice_cloud_2048.jpg',
+	// Function when resource is loaded
+	function ( texture ) {
+		// do something with the texture
+		var material = new THREE.MeshBasicMaterial( {
+			map: texture
+		 } );
+	},
 
 var forma = new THREE.SphereGeometry(1);
 var material    = new THREE.MeshLambertMaterial({color:"#00cc00"});
-material.map=loader;
+material.map=texture;
 var malla    = new THREE.Mesh(forma,material);
 malla.position.y=2;
 
