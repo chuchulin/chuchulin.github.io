@@ -18,5 +18,6 @@ malla.rotateY(0.01);
 
 }
 var escena, camara, renderizador,malla;
-loop();
 init(1);
+loop();
+
