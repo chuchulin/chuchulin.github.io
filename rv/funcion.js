@@ -12,10 +12,10 @@ document.body.appendChild(renderizador.domElement);
 
 }
 var main= function(){
+p(1);
 renderizador.render(escena,camara);
 
 
 }
 var escena, camara, renderizador;
-init(1);
-main();
+main(init);
