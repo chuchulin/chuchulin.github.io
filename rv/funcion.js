@@ -11,7 +11,7 @@ renderizador.setSize(700,700)
 document.body.appendChild(renderizador.domElement);
 
 }
-var main= function(){
+var loop= function(){
   requestAnimationFrame(loop);
 renderizador.render(escena,camara);
 malla.rotateY(0.01);
