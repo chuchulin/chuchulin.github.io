@@ -1,6 +1,6 @@
 function init(p){
 var malla=new THREE.Mesh(new THREE.BoxGeometry(p,p,p), new THREE.MeshBasicMaterial());
-escenea=new THHREE.Scene();
+escenea=new THREE.Scene();
 escena.add(malla);
 camara=new THREE.PerspectiveCamera();
 renderizador = new THREE.WEBGLRenderer();
