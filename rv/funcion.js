@@ -18,9 +18,9 @@ malla.rotateY(0.01);
 
 var con=1;
 
-if (malla.position.x>=1){con=0;}
+if (malla.position.x>=1){con=1;}
 
-else if (malla.position.x<=-1){con=1;}
+else if (malla.position.x<=-1){con=0;}
 
 if (con==1){malla.position.x+=.01;}
 
