@@ -26,7 +26,7 @@ if (con==1){malla.position.x+=.01;}
 
 else{ malla.position.x-=.01;}
 
-
+}
 var escena, camara, renderizador,malla;
 init(1);
 loop();
