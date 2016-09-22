@@ -17,11 +17,11 @@ renderizador.render(escena,camara);
 malla.rotateY(0.01);
 
 var con=1;
-if (malla.position.x==5)
+if (malla.position.x>=5)
 {
   con=0;
 }
-else if (malla.position.x==-5)
+else if (malla.position.x<=-5)
 {con=1;}
 
 if (con==1)
