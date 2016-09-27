@@ -30,6 +30,7 @@ if(textura.malla !==undifined)
     textura.renderizador.render(textura.escena,textura.camara);
   }
 }
+
 textura.setup();
 textura.loop();
 
