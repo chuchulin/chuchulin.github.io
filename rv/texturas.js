@@ -1,5 +1,5 @@
 var textura =new Object();
- textura.retrollamada = funtion()
+ textura.retrollamada = function()
  {
   var material = new THREE.MeshBasicMaterial({map:textura});
   textura.malla = new THREE.Mesh(new THREE.SphereGeometry(1),material);
