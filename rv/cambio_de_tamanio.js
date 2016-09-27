@@ -28,10 +28,10 @@ Ventana.setup=function()
 
 Ventana.loop=function()
 {
-  requestAnimationFrame(Ventana.loop),
+  requestAnimationFrame(Ventana.loop);
   Ventana.malla.rotateX(0.01);
   Ventana.malla.rotateY(0.01);
-  Ventana.renderizador.render(Ventana.escena,Ventana.camara),
+  Ventana.renderizador.render(Ventana.escena,Ventana.camara);
 }
 Ventana.setup();
 Ventana.loop();
