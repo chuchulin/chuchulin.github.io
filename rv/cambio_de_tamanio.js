@@ -2,7 +2,7 @@ var Ventana = new Object();
 Ventana.listener=function()
 {
   Ventana.camara.aspect=window.innerWidth/window.innerHeight;
-  Ventana.camera.updateProjectMatrix();
+  Ventana.camera.updateProjectionMatrix();
   Ventana.renderizador.setSize(window.innerWidth,window.innerHeight);
 }
 
