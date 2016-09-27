@@ -22,7 +22,7 @@ textura.setup=function()
 }
 textura.loop=function()
 {
-if(textura.malla !==undifined)
+if(textura.malla !==undefined)
   {
     requestAnimationFrame(Ventana.loop);
     textura.malla.rotateX(0.01);
