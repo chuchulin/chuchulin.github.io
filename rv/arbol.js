@@ -10,7 +10,7 @@ function Arbol(){
     arbolForma.merge(troncoMalla.geometry,troncoMalla.matrix);
     arbolForma.merge(esferaMalla.geometry,esferaMalla.matrix);
     
-    var material 0 new THREE.MeshNormalMaterial();
+    var material = new THREE.MeshNormalMaterial();
     this.malla=new THREE.Mesh(arbolForma,material);
     }
 
