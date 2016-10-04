@@ -15,29 +15,29 @@ function ArbolGeometry(){
     ArbolGeometry.prototype= new THREE.Geometry();
     
     setup = function(){
-    var arbol1= new Arbol();
-    var arbol2= new Arbol();
+    var arbol1= new THREE.Mesh (ArbolGeometry(),new THREE.MeshNormalMaterial());
+    var arbol2= new THREE.Mesh (ArbolGeometry(),new THREE.MeshNormalMaterial());
     
-    arbol1.malla.position.x=-5;
-    arbol2.malla.position.x=5;
+    arbol1.position.x=-5;
+    arbol2.position.x=5;
     
-    CONSTRUCTOR.camara= new THREE.PerspectiveCamera();
-    CONSTRUCTOR.camara.position.z=20;
+    camara= new THREE.PerspectiveCamera();
+    camara.position.z=20;
     
-    CONSTRUCTOR.renderizador = new THREE.WebGLRenderer();
-    CONSTRUCTOR.renderizador.setSize(600,600);
+    renderizador = new THREE.WebGLRenderer();
+    renderizador.setSize(600,600);
     
-    CONSTRUCTOR.escena = new THREE.Scene();
-    CONSTRUCTOR.escena.add(arbol1.malla);
-    CONSTRUCTOR.escena.add(arbol2.malla);
-    document.body.appendChild(CONSTRUCTOR.renderizador.domElement);
+    escena = new THREE.Scene();
+    escena.add(arbol1);
+    escena.add(arbol2);
+    document.body.appendChild(renderizador.domElement);
 }
 
 
-CONSTRUCTOR.loop = function (){
-requestAnimationFrame(CONSTRUCTOR.loop);
-CONSTRUCTOR.renderizador.render(CONSTRUCTOR.escena,CONSTRUCTOR.camara)
+loop = function (){
+requestAnimationFrame(loop);
+renderizador.render(escena,camara)
 }
 
-CONSTRUCTOR.setup();
-CONSTRUCTOR.loop();
+setup();
+loop();
