@@ -23,7 +23,7 @@ CONSTRUCTOR.setup = function(){
     arbol2.malla.position.x=5;
     
     CONSTRUCTOR.camara= new THREE.PerspectiveCamera();
-    CONSTRUCTOR.camera.position.z=20;
+    CONSTRUCTOR.camara.position.z=20;
     
     CONSTRUCTOR.renderizador = new THREE.WebGLRenderer();
     CONSTRUCTOR.Renderizador.setsize(600,600);
