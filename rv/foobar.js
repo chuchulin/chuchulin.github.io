@@ -1,5 +1,5 @@
-var foo = {nombre: "foo",uno:1 dos:2};
-var bar = {dos:"dos",tres:3},
+var foo = {nombre: "foo",uno:1,dos:2};
+var bar = {dos:"dos",tres:3};
 
 bar.__proto__=foo;
 console.log(bar.uno);
