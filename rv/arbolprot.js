@@ -1,5 +1,6 @@
 
-function ArbolGeometry(){
+var ArbolGeometry()=function()
+{
     THREE.Geometry.call(this);
     var troncoForma= new THREE.CylinderGeometry(.25,.5,1);
     var esferaForma= new THREE.SphereGeometry(.65);
@@ -14,7 +15,7 @@ function ArbolGeometry(){
     
     ArbolGeometry.prototype= new THREE.Geometry();
     
-    setup = function(){
+setup = function(){
     var arbol1= new THREE.Mesh (ArbolGeometry(),new THREE.MeshNormalMaterial());
     var arbol2= new THREE.Mesh (ArbolGeometry(),new THREE.MeshNormalMaterial());
     
