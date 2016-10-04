@@ -42,6 +42,3 @@ CONSTRUCTOR.renderizador.render(CONSTRUCTOR.escena,CONSTRUCTOR.camara)
 CONSTRUCTOR.setup();
 CONSTRUCTOR.loop();
 
-
-    }
-    
