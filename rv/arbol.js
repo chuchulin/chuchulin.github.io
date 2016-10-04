@@ -26,7 +26,7 @@ CONSTRUCTOR.setup = function(){
     CONSTRUCTOR.camara.position.z=20;
     
     CONSTRUCTOR.renderizador = new THREE.WebGLRenderer();
-    CONSTRUCTOR.Renderizador.setSize(600,600);
+    CONSTRUCTOR.renderizador.setSize(600,600);
     
     CONSTRUCTOR.escena = new THREE.Scene();
     CONSTRUCTOR.escena.add(arbol1.malla);
