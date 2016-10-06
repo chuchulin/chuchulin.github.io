@@ -58,24 +58,24 @@ function init(){
   var toroideBaseMalla = new THREE.Mesh(toroideBaseForma);
 
   // Cuerpo de la torre
-  var cuerpoForma = new THREE.CylinderGeometry(2,4,5.4,50,50);
+  var cuerpoForma = new THREE.CylinderGeometry(1.7,4,5.4,50,50);
   cuerpoForma.translate(0,3.7,0);
   var cuerpoMalla = new THREE.Mesh(cuerpoForma);
 
   // Corona de la torre
-  var coronaForma = new THREE.CylinderGeometry(3.6,3.6,.7,50,50);
+  var coronaForma = new THREE.CylinderGeometry(2.5,2.5,.7,50,50);
   coronaForma.translate(0,6.1,0);
   var coronaMalla = new THREE.Mesh(coronaForma);
 
     // Toroide de la corona
-  var toroideCoronaForma = new THREE.TorusGeometry(3.3,0.5,50,50);
+  var toroideCoronaForma = new THREE.TorusGeometry(2.2,0.5,50,50);
   toroideCoronaForma.rotateX(Math.PI / 2);
   toroideCoronaForma.translate(0,6.1,0);
   var toroideCoronaMalla = new THREE.Mesh(toroideCoronaForma);
 
   // Toroide de la corona
-  var CoronaForma = new THREE.SphereGeometry(2.8,50,50);
-  CoronaForma.translate(0,8.2,0);
+  var CoronaForma = new THREE.SphereGeometry(3,50,50);
+  CoronaForma.translate(0,8.6,0);
   var CoronaMalla = new THREE.Mesh(CoronaForma);
 
 
