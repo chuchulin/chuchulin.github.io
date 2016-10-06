@@ -73,58 +73,7 @@ function init(){
   toroideCoronaForma.translate(0,6.14,0);
   var toroideCoronaMalla = new THREE.Mesh(toroideCoronaForma);
 
-  // Detalles de la corona
-  var puntos = [];
-  puntos.push(new THREE.Vector2(3.4,1.5));
-  puntos.push(new THREE.Vector2(2.7,1.5));
-  puntos.push(new THREE.Vector2(2.7,0));
-  puntos.push(new THREE.Vector2(3.4,0));
-  puntos.push(new THREE.Vector2(3.4,1.5));
-  puntos.push(new THREE.Vector2(2.7,1.5));
 
-  var caraBaseForma = new THREE.Geometry();
-
-  caraBaseForma.vertices = [];
-  caraBaseForma.vertices = [];
-  caraBaseForma.vertices.push(new THREE.Vector3(0.35,1.5,0));
-  caraBaseForma.vertices.push(new THREE.Vector3(0.35,0,0));
-  caraBaseForma.vertices.push(new THREE.Vector3(-0.35,0,0));
-  caraBaseForma.vertices.push(new THREE.Vector3(-0.35,1.5,0));
-
-  caraBaseForma.faces = [];
-  caraBaseForma.faces.push(new THREE.Face3(1, 0, 2));
-  caraBaseForma.faces.push(new THREE.Face3(3, 2, 0));
-
-  caraBaseForma.computeBoundingSphere();
-  caraBaseForma.computeFaceNormals();
-
-  var detallesForma = new THREE.Geometry();
-  var detalForma = [];
-  var detalMalla = [];
-  var carasFormaIz = [];
-  var carasMallaIz = [];
-  var carasFormaDe = [];
-  var carasMallaDe = [];
-  for(var i = 0; i < 4; i ++){
-    detalForma[i] = new THREE.LatheGeometry(puntos, 50, 0, Math.PI / 3);
-    detalForma[i].rotateY( i * Math.PI / 2);
-    detalMalla[i] = new THREE.Mesh(detalForma[i]);
-    carasFormaIz[i] = caraBaseForma.clone();
-    carasFormaIz[i].translate(3.05,0,0);
-    carasFormaIz[i].rotateY( i * Math.PI / 2);
-    carasMallaIz[i] = new THREE.Mesh(carasFormaIz[i]);
-    carasFormaDe[i] = caraBaseForma.clone();
-    carasFormaDe[i].rotateY(Math.PI)
-    carasFormaDe[i].translate(3.05,0,0);
-    carasFormaDe[i].rotateY( i * Math.PI / 2 + Math.PI / 3);
-    carasMallaDe[i] = new THREE.Mesh(carasFormaDe[i]);
-    detallesForma.merge(carasMallaIz[i].geometry, carasMallaIz[i].matrix);
-    detallesForma.merge(carasMallaDe[i].geometry, carasMallaDe[i].matrix);
-    detallesForma.merge(detalMalla[i].geometry, detalMalla[i].matrix);
-  }
-  detallesForma.translate(0,12,0);
-
-  var detallesMalla = new THREE.Mesh(detallesForma);
 
   // Pieza general
   var piezaForma = new THREE.Geometry();
@@ -132,7 +81,6 @@ function init(){
   piezaForma.merge(cuerpoMalla.geometry, cuerpoMalla.matrix);
   piezaForma.merge(coronaMalla.geometry, coronaMalla.matrix);
   piezaForma.merge(toroideCoronaMalla.geometry, toroideCoronaMalla.matrix);
-  piezaForma.merge(detallesMalla.geometry, detallesMalla.matrix);
 
   var material = new THREE.MeshNormalMaterial();
   piezaMalla = new THREE.Mesh(piezaForma,material);
