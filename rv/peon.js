@@ -70,12 +70,12 @@ function init(){
     // Toroide de la corona
   var toroideCoronaForma = new THREE.TorusGeometry(3.3,0.5,50,50);
   toroideCoronaForma.rotateX(Math.PI / 2);
-  toroideCoronaForma.translate(0,10.14,0);
+  toroideCoronaForma.translate(0,6.1,0);
   var toroideCoronaMalla = new THREE.Mesh(toroideCoronaForma);
 
   // Toroide de la corona
-  var CoronaForma = new THREE.SphereGeometry(2.5,50,50);
-  CoronaForma.translate(0,7.2,0);
+  var CoronaForma = new THREE.SphereGeometry(2.8,50,50);
+  CoronaForma.translate(0,8.2,0);
   var CoronaMalla = new THREE.Mesh(CoronaForma);
 
 
