@@ -58,8 +58,8 @@ function init(){
   var toroideBaseMalla = new THREE.Mesh(toroideBaseForma);
 
   // Cuerpo de la torre
-  var cuerpoForma = new THREE.CylinderGeometry(2.5,4,10,50,50);
-  cuerpoForma.translate(0,4.7,0);
+  var cuerpoForma = new THREE.CylinderGeometry(2,4,10,50,50);
+  cuerpoForma.translate(0,5,0);
   var cuerpoMalla = new THREE.Mesh(cuerpoForma);
 
   // Corona de la torre
