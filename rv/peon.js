@@ -74,8 +74,8 @@ function init(){
   var toroideCoronaMalla = new THREE.Mesh(toroideCoronaForma);
 
   // Toroide de la corona
-  var CoronaForma = new THREE.SphereGeometry(3,50,50);
-  CoronaForma.translate(0,8.6,0);
+  var CoronaForma = new THREE.SphereGeometry(3.4,50,50);
+  CoronaForma.translate(0,9,0);
   var CoronaMalla = new THREE.Mesh(CoronaForma);
 
 
