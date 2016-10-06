@@ -74,9 +74,9 @@ function init(){
   var toroideCoronaMalla = new THREE.Mesh(toroideCoronaForma);
 
     // Toroide de la cabeza
-  var cabezatorreForma = THREE.SphereGeometry( 2.5, 32, 32 );
-  cabezatorreForma.translate(0,7.9,0);
-  var cabezatorreMalla = new THREE.Mesh(cabezatorreForma);
+ /// var cabezatorreForma = THREE.SphereGeometry( 2.5, 32, 32 );
+ /// cabezatorreForma.translate(0,7.9,0);
+  ///var cabezatorreMalla = new THREE.Mesh(cabezatorreForma);
   
   
 
@@ -87,7 +87,7 @@ function init(){
   piezaForma.merge(cuerpoMalla.geometry, cuerpoMalla.matrix);
   piezaForma.merge(coronaMalla.geometry, coronaMalla.matrix);
   piezaForma.merge(toroideCoronaMalla.geometry, toroideCoronaMalla.matrix);
-  piezaForma.merge(cabezatorreMalla.geometry, cabezatorreMalla.matrix);
+///  piezaForma.merge(cabezatorreMalla.geometry, cabezatorreMalla.matrix);
 
   var material = new THREE.MeshNormalMaterial();
   piezaMalla = new THREE.Mesh(piezaForma,material);
