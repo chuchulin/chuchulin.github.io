@@ -75,13 +75,13 @@ function init(){
   var toroideCoronaMalla = new THREE.Mesh(toroideCoronaForma);
   
   // Cuerpo de la corona
-  var cuerpoForma = new THREE.CylinderGeometry(3,1.8,2,50,50);
-  cuerpoForma.translate(0,10.9,0);
-  var cuerpoMalla = new THREE.Mesh(cuerpoForma);
+  var cuerpocoronaForma = new THREE.CylinderGeometry(3,1.8,2,50,50);
+  cuerpocoronaForma.translate(0,10.9,0);
+  var cuerpocoronaMalla = new THREE.Mesh(cuerpocoronaForma);
   
   // Toroide de la corona
   var CoronaForma = new THREE.SphereGeometry(.5,50,50);
-  CoronaForma.translate(0,13,0);
+  CoronaForma.translate(0,12.5,0);
   var CoronaMalla = new THREE.Mesh(CoronaForma);
 
 
@@ -92,6 +92,7 @@ function init(){
   piezaForma.merge(coronaMalla.geometry, coronaMalla.matrix);
   piezaForma.merge(toroideCoronaMalla.geometry, toroideCoronaMalla.matrix);
   piezaForma.merge(CoronaMalla.geometry, CoronaMalla.matrix);
+  piezaForma.merge(cuerpocoronaMalla.geometry, cuerpocoronaMalla.matrix);
 
   var material = new THREE.MeshNormalMaterial();
   piezaMalla = new THREE.Mesh(piezaForma,material);
