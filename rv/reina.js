@@ -131,3 +131,4 @@ function onDocumentTouchStart( event ) {
 					particle.scale.x = particle.scale.y = 16;
 					scene.add( particle );
 				}
+			}
