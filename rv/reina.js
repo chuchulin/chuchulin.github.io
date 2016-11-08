@@ -1,3 +1,4 @@
+var objects=[]
 var mouse
 var raycaster
 var TECLA = {MAS:false, MENOS:false, ARRIBA:false, ABAJO:false,
@@ -97,7 +98,7 @@ function init(){
 
   var material = new THREE.MeshNormalMaterial();
   piezaMalla = new THREE.Mesh(piezaForma,material);
-
+  objects.push(piezaMalla)
   escena.add(piezaMalla);
   
   raycaster = new THREE.Raycaster();
