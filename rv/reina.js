@@ -47,7 +47,7 @@ function animar(){
   if(TECLA.ARRIBA) piezaMalla.rotation.x += 0.01;
   if(TECLA.ABAJO) piezaMalla.rotation.x -= 0.01;
   if(TECLA.MAS) piezaMalla.position.z += 0.5;
-  if(TECLA.MENOS) piezaMalla.position.z -= 0.5;
+  piezaMalla.position.z -= 0.5;
   renderizar();
   requestAnimationFrame(animar);
 }
