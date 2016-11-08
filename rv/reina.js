@@ -1,4 +1,5 @@
-
+var mouse
+var raycaster
 var TECLA = {MAS:false, MENOS:false, ARRIBA:false, ABAJO:false,
              IZQUIERDA:false, DERECHA:false};
 
@@ -47,7 +48,7 @@ function animar(){
   if(TECLA.ARRIBA) piezaMalla.rotation.x += 0.01;
   if(TECLA.ABAJO) piezaMalla.rotation.x -= 0.01;
   if(TECLA.MAS) piezaMalla.position.z += 0.5;
-  piezaMalla.position.z -= 0.5;
+  if(TECLA.MENOS)piezaMalla.position.z -= 0.5;
   renderizar();
   requestAnimationFrame(animar);
 }
@@ -98,8 +99,35 @@ function init(){
   piezaMalla = new THREE.Mesh(piezaForma,material);
 
   escena.add(piezaMalla);
+  
+  raycaster = new THREE.Raycaster();
+				mouse = new THREE.Vector2();
+				renderer = new THREE.CanvasRenderer();
+				renderer.setClearColor( 0xf0f0f0 );
+				document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+				document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+
 }
 
 function renderizar(){
   renderizador.render(escena,camara);
 }
+function onDocumentTouchStart( event ) {
+				event.preventDefault();
+				event.clientX = event.touches[0].clientX;
+				event.clientY = event.touches[0].clientY;
+				onDocumentMouseDown( event );
+			}
+			function onDocumentMouseDown( event ) {
+				event.preventDefault();
+				mouse.x = ( event.clientX / renderer.domElement.clientWidth ) * 2 - 1;
+				mouse.y = - ( event.clientY / renderer.domElement.clientHeight ) * 2 + 1;
+				raycaster.setFromCamera( mouse, camera );
+				var intersects = raycaster.intersectObjects( objects );
+				if ( intersects.length > 0 ) {
+					intersects[ 0 ].object.material.color.setHex( Math.random() * 0xffffff );
+					var particle = new THREE.Sprite( particleMaterial );
+					particle.position.copy( intersects[ 0 ].point );
+					particle.scale.x = particle.scale.y = 16;
+					scene.add( particle );
+				}
